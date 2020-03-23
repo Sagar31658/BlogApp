@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: lightskyblue;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        hr {
+            color: black;
+        }
+
+        .header {
+            background-color: deepskyblue;
+            height: 5vh;
+            width: 100%;
+            text-align: center;
+            padding: .5rem 1rem;
+            font-family: monospace;
+        }
+
+        .nav-link {
+            border: 1.5px solid black;
+            padding: 2px 4px;
+        }
+
+        .nav-link:hover {
+            background-color: white;
+            transition: .5s all ease-in-out;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            background-color: transparent;
+            color: black;
+            border: 1px solid black;
+            padding: 2px 5px;
+            margin-bottom: 10px;
+            font-family: monospace;
+        }
+
+        button:hover {
+            background-color: white;
+            transition: .5s all ease-in-out;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <span class="nav-link"><a href="/">Home</a></span>
+            <span class="nav-link"><a href="/create">Add</a></span>
+            <span class="nav-link"><a href="/logout">Log out</a></span>
+        </nav>
+    </header>
+
+    <% for(let i=0;i<blogs.length;i++){ %>
+    <h1 class="title">
+        <%= blogs[i].Title %>
+    </h1>
+    <img src="<%= blogs[i].Image %>" alt="" srcset="" align="center">
+    <h3 class="content">
+        <%= blogs[i].Content %>
+    </h3>
+
+    <button type="submit"><a href="/edit/<%= blogs[i]._id %>">Edit</a></button>
+    <button type="submit"><a href="/delete/<%= blogs[i]._id %>">Delete</a></button>
+
+    <hr>
+    <% } %>
+
+</body>
+
+</html>

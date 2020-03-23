@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>login</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: lightskyblue;
+      text-align: center;
+    }
+
+    .header {
+      background-color: deepskyblue;
+      height: 5vh;
+      width: 100%;
+      text-align: center;
+      padding: .5rem 1rem;
+      font-family: monospace;
+    }
+
+    .nav-link {
+      border: 1.5px solid black;
+      padding: 2px 4px;
+    }
+
+    .nav-link:hover {
+      background-color: white;
+      transition: .5s all ease-in-out;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .form {
+      border: 1.5px solid black;
+      padding: 2px 4px;
+      width: 30vw;
+      margin-left: 300px;
+      margin-top: 60px;
+      font-family: monospace;
+    }
+
+    input {
+      background-color: black;
+      border: 1px solid white;
+      color: white;
+    }
+
+    .email {
+      margin-left: 25px;
+    }
+
+    button {
+      background-color: transparent;
+      color: black;
+      border: 1px solid black;
+      padding: 2px 5px;
+      margin-bottom: 10px;
+      font-family: monospace;
+    }
+
+
+    button:hover {
+      background-color: white;
+      transition: .5s all ease-in-out;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <span class="nav-link"><a href="/signup">Sign-Up</a></span>
+    </nav>
+  </header>
+  <form action="/login" method="post" class="form" align="center">
+    <h1>Log-In</h1>
+    <label>Email
+      <input class="email" type="email" name="email" required placeholder="xyz@gmail.com" autocomplete="off">
+    </label><br><br>
+    <label>Password
+      <input type="password" name="password">
+    </label><br><br>
+    <button type="submit">SUBMIT</button>
+  </form>
+</body>
+
+</html>

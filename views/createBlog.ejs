@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create-Blog</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: lightskyblue;
+            text-align: center;
+        }
+
+        .header {
+            background-color: deepskyblue;
+            height: 5vh;
+            width: 100%;
+            text-align: center;
+            padding: .5rem 1rem;
+            font-family: monospace;
+        }
+
+        .nav-link {
+            border: 1.5px solid black;
+            padding: 2px 4px;
+        }
+
+        .nav-link:hover {
+            background-color: white;
+            transition: .5s all ease-in-out;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .form {
+            border: 1.5px solid black;
+            padding: 2px 4px;
+            width: 30vw;
+            margin-left: 300px;
+            margin-top: 60px;
+            font-family: monospace;
+        }
+
+        input {
+            background-color: black;
+            border: 1px solid white;
+            color: white;
+        }
+
+        button {
+            background-color: transparent;
+            color: black;
+            border: 1px solid black;
+            padding: 2px 5px;
+            margin-bottom: 10px;
+            font-family: monospace;
+        }
+
+
+        button:hover {
+            background-color: white;
+            transition: .5s all ease-in-out;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <span class="nav-link"><a href="/">Home</a></span>
+            <span class="nav-link"><a href="/create">Add</a></span>
+            <span class="nav-link"><a href="/logout">Log out</a></span>
+        </nav>
+    </header>
+    <form class="form" action="/create" method="post">
+        <h1>Create Blog</h1>
+        <label>Title:
+            <input type="text" name="title" id="">
+        </label><br><br>
+        <label>Image:
+            <input type="text" name="image" id="">
+        </label><br><br>
+        <label>Content:
+            <input type="text" name="content" id="">
+        </label><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
